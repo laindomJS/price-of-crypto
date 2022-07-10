@@ -1,7 +1,10 @@
-import { Box, Heading, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Image, Text} from '@chakra-ui/react';
+import { Box, Heading, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Image, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-export const TableCoins = ({coins}) => {
+export const TableCoins = ({ coins, search }) => {
+  
+  const filteredCoins = coins.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase())) 
+
   return(
     <>
       <Box display="flex" flexDir="column" justifyContent="center" alignItems="center" w="100%">
@@ -21,7 +24,7 @@ export const TableCoins = ({coins}) => {
 
           <Tbody>
             {
-            coins.map((coin) => (
+            filteredCoins.map((coin) => (
               <Tr key={coin.id} 
               as={motion.tr} 
               initial={ {opacity: 0, x:-1000} } 
