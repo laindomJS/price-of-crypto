@@ -7,10 +7,10 @@ export const TableCoins = ({ coins, search }) => {
 
   return(
     <>
-      <Box display="flex" flexDir="column" justifyContent="center" alignItems="center" w="100%">
-        <Heading my="2rem" letterSpacing="2px" borderBottom="2px solid blue">Prices</Heading>
+      <Box as="header" display="flex" flexDir="column" justifyContent="center" alignItems="center" w="100%">
+        <Heading as="h2" my="2rem" letterSpacing="2px" borderBottom="2px solid blue">Prices</Heading>
       </Box>
-      <TableContainer>
+      <TableContainer as="section">
         <Table variant="simple" size="sm">
         
           <Thead>
@@ -36,7 +36,7 @@ export const TableCoins = ({ coins, search }) => {
                   <Text mr="2rem" fontWeight="semibold">{coin.name}</Text>
                   <Text color="gray.400">{coin.symbol.toUpperCase()}</Text>
                 </Td>
-                <Td>{coin.current_price.toLocaleString()}</Td>
+                <Td>{coin.current_price.toLocaleString()}$</Td>
                 <Td>
                   <Text color={coin.price_change_percentage_24h > 0 ? 'green.400' : 'red.500'}>
                     {coin.price_change_percentage_24h}

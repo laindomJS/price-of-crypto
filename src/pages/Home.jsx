@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { Box, Spinner, Input, InputGroup, InputRightElement, FormControl, Icon } from '@chakra-ui/react';
-import { FaSearch } from 'react-icons/fa';
+import { Box, Spinner, Input, FormControl } from '@chakra-ui/react';
 
 import { Navbar } from '../components/navbar/Navbar';
 import { TableCoins } from '../components/tablecoins/TableCoins';
@@ -19,7 +18,7 @@ function App() {
   return (
    <Box w="100%" h="100vh" position="relative">
     <Navbar />
-    <FormControl>
+    <FormControl as="form">
       <Input m="2rem" w="40%" type="text" placeholder="Search coin..." size="md" variant="filled" onChange={e => setSearch(e.target.value)} /> 
     </FormControl>
     {
