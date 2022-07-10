@@ -15,8 +15,17 @@ function App() {
   }, [])
 
   return (
-   <Box w="100%" h="100vh">
+   <Box w="100%" h="100vh" position="relative">
     <Navbar />
+    {
+     coins.length == 0 ? (
+      <Spinner size="lg" color="blue" position="absolute" top="0" left="0" right="0" bottom="0" margin="auto" />
+     ) : (
+      <Box as="main">
+        <TableCoins coins={coins} />
+      </Box>
+     )
+    }
    </Box>
   )
 }
@@ -24,12 +33,3 @@ function App() {
 export default App
 
 
-/*
-      {!coins ? 
-        (<Text>El arreglo no contiene nada</Text>) : 
-        (<Box>
-            {coins.map((coin) => (
-                <TableCoins key={coin.id} coin={coin} />
-            ))}
-        </Box>)}
-*/

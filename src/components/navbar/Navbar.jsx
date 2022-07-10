@@ -17,10 +17,9 @@ export const Navbar = () => {
       viewport={ {once: true} }>
 
       <Heading
-        as={motion.h1}
+        as="h1"
         fontWeight="bold"
-        whileHover={ {color:'blue', cursor:'default'} }
-        transition=".2s ease">
+        _hover={ {cursor:'default'} }>
         Price of Crypto!
       </Heading>
       
