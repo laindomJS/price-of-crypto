@@ -10,7 +10,7 @@ export const Toggle = () => {
   
   return (
     <Flex as="section" alignItems="center" >
-      <Button variant="outline" as={motion.button} fontWeight="semibold" fontSize="20px" whileHover={ {scale:0.8} } transition=".1s ease" onClick={toggleColorMode}>
+      <Button variant="outline" as={motion.button} fontWeight="semibold" fontSize={ {base:'18px', lg:'20px'} } whileHover={ {scale:0.8} } transition=".1s ease" onClick={toggleColorMode}>
         {colorMode === 'light' ? 'Dark' : 'Light'} {" "}
         Mode
       </Button>

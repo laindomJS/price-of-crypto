@@ -8,7 +8,7 @@ export const TableCoins = ({ coins, search }) => {
   return(
     <>
       <Box as="header" display="flex" flexDir="column" justifyContent="center" alignItems="center" w="100%">
-        <Heading as="h2" my="2rem" letterSpacing="2px" borderBottom="2px solid blue">Prices</Heading>
+        <Heading as="h2" my="2rem" letterSpacing="2px" borderBottom="2px solid" borderColor="blue.300">Prices</Heading>
       </Box>
       <TableContainer as="section">
         <Table variant="simple" size="sm">
@@ -27,8 +27,8 @@ export const TableCoins = ({ coins, search }) => {
             filteredCoins.map((coin) => (
               <Tr key={coin.id} 
               as={motion.tr} 
-              initial={ {opacity: 0, x:-1000} } 
-              whileInView={ {opacity: 1, x: 0} }>
+              initial={ {opacity: 0} } 
+              whileInView={ {opacity: 1} }>
 
                 <Td>{coin.market_cap_rank}</Td>
                 <Td display="flex" alignItems="center"> 

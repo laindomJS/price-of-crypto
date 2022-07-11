@@ -19,7 +19,7 @@ function App() {
    <Box w="100%" h="100vh" position="relative">
     <Navbar />
     <FormControl as="form">
-      <Input m="2rem" w="40%" type="text" placeholder="Search coin..." size="md" variant="filled" onChange={e => setSearch(e.target.value)} /> 
+      <Input m="2rem" w="40%" type="text" placeholder="Search coin..." size="md" variant="filled" onChange={e => setSearch(e.target.value)} autoComplete="off" /> 
     </FormControl>
     {
      coins.length == 0 ? (

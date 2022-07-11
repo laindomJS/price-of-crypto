@@ -18,6 +18,7 @@ export const Navbar = () => {
 
       <Heading
         as="h1"
+        fontSize={ {base:'18px', lg:'25px'} }
         fontWeight="bold"
         _hover={ {cursor:'default'} }>
         Price of Crypto!
